@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Wakala Business</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Universal Wakala Dashboard</h1>
+        <button id="logoutBtn" class="btn-danger">Toka (Logout)</button>
+    </div>
+    <div class="main-container">
+        <div class="card">
+            <h3>Anzisha Siku (Opening Balance)</h3>
+            <form id="startSessionForm">
+                <div class="form-group">
+                    <label>Cash Taslimu (Asubuhi)</label>
+                    <input type="number" id="openingCash" required>
+                </div>
+                <button type="submit" class="btn-success">Fungua Siku</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

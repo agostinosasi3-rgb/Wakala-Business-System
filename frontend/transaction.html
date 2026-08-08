@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <title>Miamala - Universal Wakala</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+    <div class="navbar"><h1>Kurekodi Miamala</h1><a href="dashboard.html" style="color:white;">Dashboard</a></div>
+    <div class="main-container">
+        <div class="card">
+            <h3>Rekodi Muamala Mpya</h3>
+            <form id="txForm">
+                <div class="form-group">
+                    <label>Mtandao (Provider)</label>
+                    <select id="providerSelect" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Aina ya Muamala</label>
+                    <select id="txType" required>
+                        <option value="CASH_IN">Cash In (Kuweka Pesa)</option>
+                        <option value="CASH_OUT">Cash Out (Kutoa Pesa)</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Kiasi (TZS)</label><input type="number" id="txAmount" required></div>
+                <div class="form-group"><label>Reference Number (Kumbukumbu)</label><input type="text" id="refNum"></div>
+                <button type="submit" class="btn-success">Hifadhi Muamala</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>

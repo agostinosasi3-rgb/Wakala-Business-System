@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Database Service (PostgreSQL)
+  db:
+    image: postgres:15-alpine
+    container_name: wakala_db
+    restart: always
+    environment:
+      POSTGRES_USER: wakala_user
+      POSTGRES_PASSWORD: wakala_password
+      POSTGRES_DB: wakala_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Backend Service (FastAPI)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: wakala_backend
+    restart: always
+    environment:
+      - DATABASE_URL=postgresql://wakala_user:wakala_password@db:5432/wakala_db
+      - SECRET_KEY=WAKALA_BUSINESS_SUPER_SECRET_KEY_2026_PRODUCTION
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  # Frontend Service (Nginx)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: wakala_frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

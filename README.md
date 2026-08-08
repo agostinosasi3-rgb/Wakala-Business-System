@@ -82,6 +82,73 @@ source venv/bin/activate  # Kwenye Windows: venv\Scripts\activate
 # Weka Packages
 pip install -r requirements.txt
 
+###file structure
+wakala-business-system/
+│
+├── backend/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── __init__.py
+│   │   │   ├── config.py
+│   │   │   ├── database.py
+│   │   │   ├── security.py
+│   │   │   └── auth.py
+│   │   │
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   ├── user.py
+│   │   │   ├── provider.py
+│   │   │   ├── daily_session.py
+│   │   │   ├── transaction.py
+│   │   │   ├── tariff.py
+│   │   │   ├── expense.py
+│   │   │   └── audit_log.py
+│   │   │
+│   │   ├── schemas/
+│   │   │   ├── __init__.py
+│   │   │   ├── user_schema.py
+│   │   │   ├── provider_schema.py
+│   │   │   ├── daily_session_schema.py
+│   │   │   ├── transaction_schema.py
+│   │   │   ├── expense_schema.py
+│   │   │   └── report_schema.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── auth_service.py
+│   │   │   ├── provider_service.py
+│   │   │   ├── session_service.py
+│   │   │   ├── transaction_service.py
+│   │   │   ├── reconciliation_service.py
+│   │   │   └── report_service.py
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   ├── auth_router.py
+│   │   │   ├── provider_router.py
+│   │   │   ├── session_router.py
+│   │   │   ├── transaction_router.py
+│   │   │   ├── expense_router.py
+│   │   │   └── report_router.py
+│   │   │
+│   │   ├── main.py
+│   │   └── __init__.py
+│   │
+│   ├── requirements.txt
+│   └── .env
+│
+├── frontend/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── transactions.html
+│   ├── reports.html
+│   ├── css/
+│   └── js/
+│
+└── README.md
+
 # Tengeneza faili la .env kutokana na mfano
 cp .env.example .env
 

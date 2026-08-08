@@ -67,27 +67,6 @@ Mfumo unafanya hesabu za kiotomatiki wakati wa kufunga siku:
 * **Containerization:** Docker & Docker Compose
 
 ---
-
-## ⚙️ Jinsi ya Kuendesha Mradi (Local Setup)
-
-### 1. Kuandaa Backend
-
-```bash
-cd backend
-
-# Tengeneza Virtual Environment
-python -m venv venv
-source venv/bin/activate  # Kwenye Windows: venv\Scripts\activate
-
-# Weka Packages
-pip install -r requirements.txt
-# Tengeneza faili la .env kutokana na mfano
-cp .env.example .env
-
-# Endesha Server
-uvicorn app.main:app --reload
-'''
-
 ###file structure
 wakala-business-system/
 │
@@ -154,5 +133,26 @@ wakala-business-system/
 │   └── js/
 │
 └── README.md
+
+
+
+## ⚙️ Jinsi ya Kuendesha Mradi (Local Setup)
+
+### 1. Kuandaa Backend
+
+```bash
+cd backend
+
+# Tengeneza Virtual Environment
+python -m venv venv
+source venv/bin/activate  # Kwenye Windows: venv\Scripts\activate
+
+# Weka Packages
+pip install -r requirements.txt
+# Tengeneza faili la .env kutokana na mfano
+cp .env.example .env
+
+# Endesha Server
+uvicorn app.main:app --reload
 
 

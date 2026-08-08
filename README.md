@@ -86,6 +86,7 @@ cp .env.example .env
 
 # Endesha Server
 uvicorn app.main:app --reload
+'''
 
 ###file structure
 wakala-business-system/

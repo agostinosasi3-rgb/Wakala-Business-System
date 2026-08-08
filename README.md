@@ -1,7 +1,5 @@
 # Wakala-Business-System
 Aim to help my customers in my business of mobile phone transaction
-# Universal Agency Banking & Wallet Management System
-
 Mfumo wa kisasa na wa kitaalamu wa kusimamia biashara ya mawakala wa fedha nchini Tanzania. Mfumo huu unakusaidia kufuatilia float za mitandao yote (M-Pesa, Mix by Yas / Halotel-Tigo, Airtel Money, Tigo Pesa, na Wakala wa Benki), pesa taslimu zilizopo kwenye droo (Cash in Hand), miamala ya kila siku, na kutoa ripoti kamili za faida au hasara za kila wiki na mwezi.
 
 ---

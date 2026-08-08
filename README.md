@@ -81,6 +81,11 @@ source venv/bin/activate  # Kwenye Windows: venv\Scripts\activate
 
 # Weka Packages
 pip install -r requirements.txt
+# Tengeneza faili la .env kutokana na mfano
+cp .env.example .env
+
+# Endesha Server
+uvicorn app.main:app --reload
 
 ###file structure
 wakala-business-system/
@@ -149,8 +154,4 @@ wakala-business-system/
 │
 └── README.md
 
-# Tengeneza faili la .env kutokana na mfano
-cp .env.example .env
 
-# Endesha Server
-uvicorn app.main:app --reload
